@@ -3,5 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, m510n31cpljm")
+	var p *int
+
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println(r)
+		}
+	}()
+
+	fmt.Println(p)
+
+	fmt.Println(*p)
 }

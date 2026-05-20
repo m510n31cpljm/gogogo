@@ -3,5 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello, m510n31cpljm")
+	counter := func() func() int {
+		i := 0
+
+		return func() int {
+			i++
+
+			return i
+		}
+	}
+
+	c := counter()
+
+	fmt.Println(c())
+	fmt.Println(c())
+	fmt.Println(c())
+	fmt.Println(c())
 }
