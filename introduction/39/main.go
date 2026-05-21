@@ -1,7 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+)
+
+type Person struct {
+	Name string `json:"name"`
+	Age  int    `json:"age,omitempty"`
+}
 
 func main() {
-	fmt.Println("Hello, m510n31cpljm")
+	person := Person{
+		Name: "person",
+		Age:  25,
+	}
+
+	data, _ := json.Marshal(person)
+
+	fmt.Println(string(data))
 }
