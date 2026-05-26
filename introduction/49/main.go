@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"49/mathops"
+)
 
 func main() {
-	fmt.Println("Hello, m510n31cpljm")
+	mathops.Add()
 }
